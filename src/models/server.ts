@@ -25,7 +25,7 @@ class Server {
   constructor() {
     config();
     this.app = express();
-    this.port = process.env.PORT! ;
+    this.port = process.env.DB_PORT! ;
     this.listen();
     this.midlewares();
     this.routes();

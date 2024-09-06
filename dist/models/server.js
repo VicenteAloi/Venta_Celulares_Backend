@@ -35,7 +35,7 @@ class Server {
     constructor() {
         (0, dotenv_1.config)();
         this.app = (0, express_1.default)();
-        this.port = process.env.PORT || '3306';
+        this.port = process.env.DB_PORT;
         this.listen();
         this.midlewares();
         this.routes();
