@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const customers_1 = require("../controllers/customers");
+const user_1 = require("../controllers/user");
+const router = (0, express_1.Router)();
+router.get('/', customers_1.getCustomers); //SEQUELIZE;
+router.delete('/:dni', customers_1.deleteCustomer); //SEQUELIZE;
+router.patch('/:dni', customers_1.updateCustomer); //SEQUELIZE;
+router.post('/login', user_1.loginUser); //SEQUELIZE;
+router.get('/:id', customers_1.getSalesUser); //QUERY;
+exports.default = router;
