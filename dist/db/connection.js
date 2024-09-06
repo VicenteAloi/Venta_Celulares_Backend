@@ -12,9 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = require("dotenv");
 const sequelize_1 = require("sequelize");
 (0, dotenv_1.config)();
-const sequelize = new sequelize_1.Sequelize(process.env.DB_DATABASE, process.env.DB_USER, process.env.DB_PASSWORD, {
-    host: process.env.DB_HOST,
-    dialect: 'mysql'
+// const sequelize = new Sequelize(
+//   process.env.DB_DATABASE!,process.env.DB_USER!,process.env.DB_PASSWORD!, {
+//   host:process.env.DB_HOST!,
+//   dialect: 'mysql'
+// })
+const sequelize = new sequelize_1.Sequelize(process.env.DATABASE_URL, {
+    dialect: 'mysql',
+    logging: false,
 });
 function testConection() {
     return __awaiter(this, void 0, void 0, function* () {
