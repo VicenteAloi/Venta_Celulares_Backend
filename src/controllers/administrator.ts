@@ -20,7 +20,7 @@ export const getAdministrators = async (request: Request, response: Response) =>
 
 export const getAdministratorsPaginate = async(req:Request, res:Response)=>{
   const page = parseInt(req.params.page);
-  const size= 2
+  const size= 5
   try{
     const {count, rows} = await User.findAndCountAll({ 
       where: { isAdmin: true },

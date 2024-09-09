@@ -9,7 +9,7 @@ import { Brand } from "../models/brand";
 
 export const getAllProducts = async (req: Request, res: Response) => { // Método encargado de traer los productos de la BD
   const page = parseInt(req.params.page);
-  const size= 3
+  const size= 8
   let option = { 
     limit: +size,
     offset: (+page * (+size))
