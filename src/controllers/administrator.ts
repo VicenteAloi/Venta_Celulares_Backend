@@ -24,8 +24,8 @@ export const getAdministratorsPaginate = async(req:Request, res:Response)=>{
   try{
     const {count, rows} = await User.findAndCountAll({ 
       where: { isAdmin: true },
-      limit: +size,
-      offset: (+page * (+size)),
+      limit: size,
+      offset: (page * (size)),
     });
     res.status(200).json({
       total: count,

@@ -29,7 +29,7 @@ const getAdministrators = (request, response) => __awaiter(void 0, void 0, void 
 exports.getAdministrators = getAdministrators;
 const getAdministratorsPaginate = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const page = parseInt(req.params.page);
-    const size = 2;
+    const size = 5;
     try {
         const { count, rows } = yield user_1.User.findAndCountAll({
             where: { isAdmin: true },

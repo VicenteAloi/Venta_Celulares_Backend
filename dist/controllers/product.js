@@ -21,7 +21,7 @@ const sequelize_1 = require("sequelize");
 const brand_1 = require("../models/brand");
 const getAllProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const page = parseInt(req.params.page);
-    const size = 3;
+    const size = 8;
     let option = {
         limit: +size,
         offset: (+page * (+size))
